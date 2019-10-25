@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
     val words : List<String>
     when (args.size) {
         0 -> {
-            println("Enter text") //lvl-5
+            println("Enter text")
             words = readLine()!!.split(' ')
            sort(words)
         }
