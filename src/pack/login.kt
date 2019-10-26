@@ -1,5 +1,10 @@
 package pack
 
+fun help(){
+    print("To login you need to write you login and password : -login yourlogin | -pass yourpass")
+    return;
+}
+
 fun main(args: Array<String>){
     when (args.size) {
         0 -> {
@@ -8,15 +13,11 @@ fun main(args: Array<String>){
             check(login)
         }
         else ->{
-        check(args.toList())
+            check(args.toList())
         }
     }
 }
 
-fun help(){
-    print("To login you need to write you login and password : -login yourlogin | -pass yourpass")
-    return;
-}
 fun check(args: List<String>){
     val admin: user = user("admin","admin")
     val user1: user = user("user1","user")

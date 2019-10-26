@@ -1,4 +1,6 @@
 #!/bin/sh
+rm trainmyself.jar
+kotlinc -verbose src/pack/Main.kt -include-runtime -d trainmyself.jar
 var="the quick brown fox jumps over the lazy dog "
 echo "Input: $var"
 echo "Expected output:

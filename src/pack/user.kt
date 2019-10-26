@@ -1,5 +1,5 @@
 package pack
 
-class user(val login : String, val pass : String) {
+data class user(val login : String, val pass : String) {
 
 }

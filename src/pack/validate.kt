@@ -3,7 +3,7 @@ package pack
 class validate {
 
     fun isLoginValid(login:String) : Boolean {
-        
+        TODO()
     }
 
     fun findUser(login:String) : user? {
