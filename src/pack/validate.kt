@@ -1,16 +1,16 @@
 package pack
 
-class validate {
+class Validate {
 
     fun isLoginValid(login:String) : Boolean {
+        TODO() //^[a-zA-Z0-9]+$
+    }
+
+    fun findUser(login:String) : User? {
         TODO()
     }
 
-    fun findUser(login:String) : user? {
-        TODO()
-    }
-
-    fun isPassCorrect( user : user, pass: String) : Boolean {
+    fun isPassCorrect( user : User, pass: String) : Boolean {
         TODO()
     }
 

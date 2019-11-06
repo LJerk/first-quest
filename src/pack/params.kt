@@ -1,4 +1,4 @@
 package pack
 
-class params( val login : String?, val pass: String?, val help: Boolean = false) {
+class Params( val login : String?, val pass: String?, val help: Boolean = false) {
 }
