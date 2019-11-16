@@ -1,5 +1,7 @@
 package pack
 
+import kotlin.system.exitProcess
+
 class Validate (val logins : List<User>){
 
     fun isLoginValid(login:String) : Boolean {
@@ -7,19 +9,16 @@ class Validate (val logins : List<User>){
         return valid.containsMatchIn(login)
     }
 
-    fun findUser(login:String) : User? {
-     /*   val logins = listOf("admin","user")
-        for(log in logins){
-            if (login == log)
-            {return}
+    fun findUser(login:String) : User {
+        for (user in users){
+            if(login == user.login) return user
         }
-
-      */
-        TODO()
+        exitProcess(status = 3)
     }
 
     fun isPassCorrect( user : User, pass: String) : Boolean {
-        TODO()
+        if(pass == user.pass) exitProcess(status = 0)
+            else exitProcess(status = 4)
     }
 
 }

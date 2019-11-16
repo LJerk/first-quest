@@ -6,3 +6,19 @@ echo "end compile"
 echo "Expected output: 255"
 java -jar test2.jar -h
 echo "Actual output: $?"
+
+echo "Expected output: 0"
+java -jar test2.jar -login admin -pass admin
+echo "Actual output: $?"
+
+echo "Expected output: 2"
+java -jar test2.jar -login @ -pass admin
+echo "Actual output: $?"
+
+echo "Expected output: 3"
+java -jar test2.jar -login addmin -pass admin
+echo "Actual output: $?"
+
+echo "Expected output: 4"
+java -jar test2.jar -login admin -pass dsa2
+echo "Actual output: $?"
