@@ -1,12 +1,20 @@
 package pack
 
-class Validate {
+class Validate (val logins : List<User>){
 
     fun isLoginValid(login:String) : Boolean {
-        TODO() //^[a-zA-Z0-9]+$
+        val valid = Regex(pattern = "[a-zA-Z0-9]")
+        return valid.containsMatchIn(login)
     }
 
     fun findUser(login:String) : User? {
+     /*   val logins = listOf("admin","user")
+        for(log in logins){
+            if (login == log)
+            {return}
+        }
+
+      */
         TODO()
     }
 
