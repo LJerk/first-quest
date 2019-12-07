@@ -23,10 +23,15 @@ fun main(args: Array<String>) {
 fun signing(args: Params) {
     val hashing = Hasher(args.pass)
     val valid = Validate(users)
+    val way = Resource(args.res)
     if (valid.isLoginValid(login = args.login))
     else exitProcess(status = 2)
     val user = valid.findUser(args.login) ?: exitProcess(status = 3)
-    if (valid.isPassCorrect(user, hashing.hash(args.pass))) exitProcess(status = 0)
+    if (valid.isPassCorrect(user, hashing.hash(args.pass))) {
+        println(args.role)
+        println(way.Wayfinder(args.res))
+        exitProcess(status = 0)
+    }
     else exitProcess(status = 4)
 
 }

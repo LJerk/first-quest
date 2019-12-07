@@ -1,5 +1,5 @@
 package pack
 
-enum class Role {
-    READ, WRITE, EXECUTE
+enum class Role(s: String) {
+    READ("READ"), WRITE("WRITE"), EXECUTE("EXECUTE")
 }
