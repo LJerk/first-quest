@@ -11,4 +11,5 @@ class Validate(val logins: List<User>) {
 
     fun isPassCorrect(user: User?, pass: String): Boolean = pass == user?.pass
 
+
 }
