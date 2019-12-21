@@ -2,7 +2,7 @@ package pack
 
 import java.security.MessageDigest
 
-class Hasher(pass:String) {
+class HasherService(pass: String) {
     fun hash(pass: String): String {
         val bytes = pass.toByteArray()
         val md = MessageDigest.getInstance("SHA-256")

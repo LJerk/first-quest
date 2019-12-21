@@ -3,8 +3,8 @@ package pack
 class Params(args: Array<String>) {
     val login: String
     val pass: String
-    val res : String
-    val role : String
+    val res: String
+    val role: String
     val help: Boolean
 
     init {
@@ -24,16 +24,10 @@ class Params(args: Array<String>) {
                 role = null.toString()
             }
             args[0] == "-login" -> {
-                help = !(args.size == 8 && ((args[4] == "-res" && args[6] == "-role") && ((args[0] == "-login" && args[2] == "-pass") || (args[0] == "-pass" && args[2] == "-login"))))
+                help =
+                    !(args.size == 8 && ((args[4] == "-res" && args[6] == "-role") && ((args[0] == "-login" && args[2] == "-pass") || (args[0] == "-pass" && args[2] == "-login"))))
                 login = args[1]
                 pass = args[3]
-                res = args[5]
-                role = args[7]
-            }
-            args[0] == "-pass" -> {
-                help = !(args.size == 8 && ((args[4] == "-res" && args[6] == "-role") && ((args[0] == "-login" && args[2] == "-pass") || (args[0] == "-pass" && args[2] == "-login"))))
-                login = args[3]
-                pass = args[1]
                 res = args[5]
                 role = args[7]
             }
